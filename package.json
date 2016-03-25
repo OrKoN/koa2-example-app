@@ -1,5 +1,5 @@
 {
-  "name": "gena-data",
+  "name": "koa2-example-app",
   "version": "0.1.0",
   "description": "Data Server for Gena sites",
   "main": "server.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/60devs/gena-data.git"
+    "url": "git+ssh://git@github.com/OrKoN/koa2-example-app.git"
   },
   "keywords": [
     "data",
@@ -19,7 +19,7 @@
   ],
   "author": "Oleksii Rudenko",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/60devs/gena-data#readme",
+  "homepage": "https://github.com/OrKoN/koa2-example-app#readme",
   "dependencies": {
     "babel-polyfill": "^6.5.0",
     "kcors": "^2.0.0",

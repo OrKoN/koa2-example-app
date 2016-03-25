@@ -1,0 +1,47 @@
+{
+  "name": "gena-data",
+  "version": "0.1.0",
+  "description": "Data Server for Gena sites",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node index",
+    "watch": "nodemon --exec npm run start",
+    "test": "mocha --compilers js:babel-register",
+    "build": "babel src -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/60devs/gena-data.git"
+  },
+  "keywords": [
+    "data",
+    "node"
+  ],
+  "author": "Oleksii Rudenko",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/60devs/gena-data#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.5.0",
+    "kcors": "^2.0.0",
+    "koa": "^2.0.0-alpha.3",
+    "koa-bodyparser": "^3.0.0",
+    "koa-router": "^7.0.1",
+    "promise-redis": "0.0.5",
+    "redis": "^2.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0",
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "babel-register": "^6.5.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-3"
+    ]
+  }
+}

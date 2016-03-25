@@ -1,0 +1,19 @@
+{
+  "apps" : [
+      {
+        "name"        : "gena-data",
+        "script"      : "index-prod.js",
+        "args"        : [],
+        "watch"       : false,
+        "merge_logs"  : true,
+        "cwd"         : "/apps/gena-data/",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "instances": 2,
+        "exec_mode"  : "cluster_mode",
+        "autorestart": true,
+        "log_date_format": "YYYY-MM-DD HH:mm Z"
+      }
+  ]
+}

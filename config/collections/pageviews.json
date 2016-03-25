@@ -1,0 +1,15 @@
+{
+  "name": "pageviews",
+  "attributes": [
+    "page",
+    "time",
+    "referrer",
+    "agent",
+    "source",
+    "medium",
+    "campaign"
+  ],
+  "groupBy": [
+    "page"
+  ]
+}

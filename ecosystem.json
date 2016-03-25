@@ -1,12 +1,10 @@
 {
   "apps" : [
       {
-        "name"        : "gena-data",
+        "name"        : "koa2-example-app",
         "script"      : "index-prod.js",
-        "args"        : [],
-        "watch"       : false,
         "merge_logs"  : true,
-        "cwd"         : "/apps/gena-data/",
+        "cwd"         : "/apps/koa2-example-app/",
         "env": {
           "NODE_ENV": "production"
         },

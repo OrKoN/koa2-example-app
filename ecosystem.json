@@ -2,11 +2,11 @@
   "apps" : [
       {
         "name"        : "koa2-example-app",
-        "script"      : "index-prod.js",
+        "script"      : "index.js",
         "merge_logs"  : true,
-        "cwd"         : "/apps/koa2-example-app/",
         "env": {
-          "NODE_ENV": "production"
+          "NODE_ENV": "production",
+          "PORT": 4000
         },
         "instances": 2,
         "exec_mode"  : "cluster_mode",

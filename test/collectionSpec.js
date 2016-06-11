@@ -1,6 +1,5 @@
-import 'babel-polyfill';
 import { expect } from 'chai';
-import Collection from '../src/collection';
+import Collection from '../build/collection';
 
 describe('Collection', () => {
   const repo = new Collection({

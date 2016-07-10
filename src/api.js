@@ -4,7 +4,7 @@ const api = KoaRouter();
 
 const validateCollection = async (ctx, next) => {
   const { collection } = ctx.params;
-  if (!(collection in ctx.collections)) {
+  if (!(collection in ctx.state.collections)) {
     return ctx.throw(404);
   }
   await next();
@@ -12,7 +12,7 @@ const validateCollection = async (ctx, next) => {
 
 const validateKey = async (ctx, next) => {
   const { authorization } = ctx.request.headers;
-  if (authorization !== ctx.authorizationHeader) {
+  if (authorization !== ctx.state.authorizationHeader) {
     return ctx.throw(401);
   }
   await next();
@@ -29,6 +29,7 @@ api.get('/:collection/:attribute/:value/count',
     } = ctx.params;
 
     const count = await ctx
+      .state
       .collections[collection]
       .countBy(attribute, value);
 
@@ -43,6 +44,7 @@ api.post('/:collection',
   async (ctx, next) => {
     const { collection } = ctx.params;
     const count = await ctx
+      .state
       .collections[collection]
       .add(ctx.request.body);
 

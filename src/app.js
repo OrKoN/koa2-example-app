@@ -7,8 +7,8 @@ import cors from 'kcors';
 const app = new Koa()
   .use(cors())
   .use(async (ctx, next) => {
-    ctx.collections = config.collections;
-    ctx.authorizationHeader = 'Key ' + config.key;
+    ctx.state.collections = config.collections;
+    ctx.state.authorizationHeader = 'Key ' + config.key;
     await next();
   })
   .use(bodyParser())
